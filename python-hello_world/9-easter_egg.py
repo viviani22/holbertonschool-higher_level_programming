@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 import this
-print(this)
+that = str(this)
+print(that[0:0])
