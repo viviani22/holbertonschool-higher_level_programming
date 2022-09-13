@@ -6,4 +6,3 @@ def common_elements(set_1, set_2):
             if element1 == element2:
                 new_list.append(element1)
     return new_list
-
