@@ -53,7 +53,7 @@ class Square:
         for i in range(self.__size):
             spaces = int(self.__position[0])
             while spaces > 0:
-                print(end="_")
+                print(end=" ")
                 spaces -= 1
             for j in range(self.__size):
                 print("#", end="")
