@@ -12,7 +12,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__position = position
         if len(position) != 2 or\
-                type(position[0]) is not int and type(position[1]) is not int\
+                type(position[0]) is not int or type(position[1]) is not int\
                 or position[0] < 0 or position[1] < 0:
             raise TypeError
 
@@ -28,7 +28,7 @@ class Square:
     def position(self, position):
         self.__position = position
         if len(position) != 2 or\
-                type(position[0]) is not int and type(position[1]) is not int\
+                type(position[0]) is not int or type(position[1]) is not int\
                 or position[0] < 0 or position[1] < 0:
             raise TypeError
 
@@ -47,7 +47,7 @@ class Square:
         if self.__size <= 0:
             print()
         new_lines = int(self.__position[1])
-        while new_lines != 0:
+        while new_lines != 0 and self.__size != 0:
             print()
             new_lines -= 1
         for i in range(self.__size):
