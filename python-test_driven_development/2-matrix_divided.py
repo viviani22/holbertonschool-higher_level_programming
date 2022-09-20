@@ -15,5 +15,5 @@ def matrix_divided(matrix, div):
         for number in list:
             if type(number) not in [int, float]:
                 raise TypeError("matrix must be a matrix (list of lists)" +
-                        " of integers/floats")
+                                " of integers/floats")
     return [[float("{:.2f}".format(x/div)) for x in list] for list in matrix]
