@@ -8,13 +8,13 @@ ZeroDivisionError: division by zero
 >>> print(matrix_divided(matrix, "hi"))
 Traceback (most recent call last):
 TypeError: div must be a number
->>> print(matrix_divided(matrix, float('inf')))
+>>> print(matrix_divided([[float('inf')]], 2))
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 >>> print(matrix_divided())
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
->>> print(matrix_divided(matrix)):
+>>> print(matrix_divided(matrix))
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 >>> matrix = [["hello", 2, 3]]
