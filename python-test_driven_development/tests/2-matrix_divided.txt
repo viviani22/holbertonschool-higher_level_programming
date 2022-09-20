@@ -8,7 +8,7 @@ ZeroDivisionError: division by zero
 >>> print(matrix_divided(matrix, "hi"))
 Traceback (most recent call last):
 TypeError: div must be a number
->>> print(matrix_divided([[float('inf')]], 2))
+>>> print(matrix_divided([[float('inf')]], float('inf'))
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 >>> print(matrix_divided())
