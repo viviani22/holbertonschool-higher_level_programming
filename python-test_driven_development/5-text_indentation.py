@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task 5"""
 
+
 def text_indentation(text):
     """ Prints new line after . ? or :"""
     if type(text) is not str:
