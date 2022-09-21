@@ -7,7 +7,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     indented_text = ""
     for i in range(len(text)):
-        if i > 0 and text[i-1] in ['.', '?', ':']:
+        if text[i] == ' ' and text[i-1] in ['.', '?', ':']:
             continue
         indented_text += text[i]
         if text[i] in ['.', '?', ':']:
