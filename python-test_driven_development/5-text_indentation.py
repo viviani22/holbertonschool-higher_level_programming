@@ -8,8 +8,7 @@ def text_indentation(text):
     indented_text = ""
     for i in range(len(text)):
         if text[i] == ' ' and text[i-1] in ['.', '?', ':']:
+            indented_text += '\n' + '\n'
             continue
         indented_text += text[i]
-        if text[i] in ['.', '?', ':'] and text[i+1] == ' ':
-            indented_text += '\n' + '\n'
     print(indented_text)
