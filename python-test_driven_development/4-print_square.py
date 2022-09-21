@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Task 4"""
+
+
 def print_square(size):
+    """Prints square on variable size"""
     if type(size) is float and size < 0:
         raise TypeError("size must be an integer")
     if type(size) is not int:
