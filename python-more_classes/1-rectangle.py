@@ -32,7 +32,7 @@ class Rectangle:
         if width < 0:
             raise ValueError("width must be >= 0")
 
-    @height.setter 
+    @height.setter
     def height(self, height):
         self.__height = height
         if type(height) is not int:
