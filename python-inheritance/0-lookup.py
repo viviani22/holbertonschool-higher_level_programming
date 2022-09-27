@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """Returns dict"""
-    return obj.__dict__
+    return dir(obj) 
