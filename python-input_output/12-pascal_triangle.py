@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """returns pascal triangle for n rows"""
     big_list = []
     i = 0
     for i in range(n):
