@@ -77,9 +77,11 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """returns area"""
         return self.__width * self.__height
 
     def display(self):
+        """pritns rectange"""
         for y in range(self.__y):
             print()
         for i in range(self.__height):
@@ -94,6 +96,7 @@ class Rectangle(Base):
                 f"{self.__width}/{self.__height}")
 
     def update(self, *args):
+        """updates instance with argument list"""
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
