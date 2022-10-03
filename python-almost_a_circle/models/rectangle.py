@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 2"""
+"""Task 2..9"""
 from models.base import Base
 
 
@@ -75,3 +75,32 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        return self.__width * self.__height
+
+    def display(self):
+        for y in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for x in range(self.__x):
+                print(end=" ")
+            for j in range(self.__width):
+                print('#', end="")
+            print()
+
+    def __str__(self):
+        return (f"[Rectangle] {self.id} {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
+
+    def update(self, *args):
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.width = args[1]
+        if len(args) >= 3:
+            self.height = args[2]
+        if len(args) >= 4:
+            self.x = args[3]
+        if len(args) >= 5:
+            self.y = args[4]
