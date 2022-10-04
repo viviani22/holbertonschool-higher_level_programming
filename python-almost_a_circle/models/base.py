@@ -27,9 +27,23 @@ class Base:
         with open(f"{cls.__name__}.json", "w") as file:
             file.write(cls.to_json_string(new_list))
 
+    def from_json_string(json_string):
+        new_list = []
+        if json_string is not None:
+            new_list += json.loads(json_string)
+        return new_list
+
     @classmethod
     def create(cls, **dictionary):
         dummy = cls(1, 1)
-        for key, value in dictionary.items():
-            setattr(dummy, key, value)
+        dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        new_list = []
+        with open(f"{cls.__name__}.json") as file:
+            json_list = cls.from_json_string(file.read())
+            for instance in json_list:
+                new_list.append(cls.create(**instance))
+        return new_list
