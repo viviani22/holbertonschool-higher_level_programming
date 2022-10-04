@@ -22,7 +22,7 @@ class Base:
     def save_to_file(cls, list_objs):
         new_list = []
         for obj in list_objs:
-            new_list.append(json.loads(cls.to_json_string(obj.to_dictionary())))
+            new_list.append(obj.to_dictionary())
         with open(f"{cls.__name__}.json", "w") as file:
-            file.write(str(new_list))
+            file.write(cls.to_json_string(new_list))
 
