@@ -28,6 +28,7 @@ class Base:
             file.write(cls.to_json_string(new_list))
 
     def from_json_string(json_string):
+        """method"""
         new_list = []
         if json_string is not None:
             new_list += json.loads(json_string)
