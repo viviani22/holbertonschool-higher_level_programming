@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Task 1"""
+import json
 
 
 class Base:
@@ -12,3 +13,14 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        return json.dumps(list_dictionaries)
+    
+    @classmethod
+    def save_to_file(cls, list_objs):
+        new_list = []
+        for obj in list_objs:
+            new_list.append(str(cls.to_json_string(obj.to_dictionary())))
+        with open(f"{type(list_objs[0]).__name__}.json", "w") as file:
+            file.write(str(new_list))
