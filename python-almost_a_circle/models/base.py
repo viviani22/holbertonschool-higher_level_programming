@@ -26,3 +26,10 @@ class Base:
                 new_list.append(obj.to_dictionary())
         with open(f"{cls.__name__}.json", "w") as file:
             file.write(cls.to_json_string(new_list))
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1, 1)
+        for key, value in dictionary.items():
+            setattr(dummy, key, value)
+        return dummy
