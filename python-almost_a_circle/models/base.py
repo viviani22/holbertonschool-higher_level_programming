@@ -17,7 +17,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """method"""
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         new_list = []
@@ -26,4 +26,3 @@ class Base:
                 new_list.append(obj.to_dictionary())
         with open(f"{cls.__name__}.json", "w") as file:
             file.write(cls.to_json_string(new_list))
-
