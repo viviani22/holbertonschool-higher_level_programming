@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task 1"""
 import json
+import os.path
 
 
 class Base:
@@ -43,8 +44,10 @@ class Base:
     @classmethod
     def load_from_file(cls):
         new_list = []
-        with open(f"{cls.__name__}.json") as file:
-            json_list = cls.from_json_string(file.read())
-            for instance in json_list:
-                new_list.append(cls.create(**instance))
+        if os.path.exists(f"{cls.__name__}.json"):
+            with open(f"{cls.__name__}.json") as file:
+                json_list = cls.from_json_string(file.read())
+                for instance in json_list:
+                    new_list.append(cls.create(**instance))
         return new_list
+        
