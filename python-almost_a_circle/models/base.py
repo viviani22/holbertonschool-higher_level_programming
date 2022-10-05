@@ -50,4 +50,3 @@ class Base:
                 for instance in json_list:
                     new_list.append(cls.create(**instance))
         return new_list
-        
