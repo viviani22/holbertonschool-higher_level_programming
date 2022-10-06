@@ -9,7 +9,9 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b2.id, 2)
         b3 = Base(89)
         self.assertEqual(b3.id, 89)
-    def test_base_to_json_string(list_dictionaries):
-        pass
-    def test_base_from_json_string(json_string):
+    def test_base_to_json_string(self):
+        self.assertEqual(Base.to_json_string(None), "null")
+        self.assertEqual(Base.to_json_string([]), "[]")
+        self.assertEqual(Base.to_json_string([ { 'id': 12 }]), '[{"id": 12}]')
+    def test_base_from_json_string(self):
         pass
