@@ -98,20 +98,21 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r1.y, 4)
     def test_rectangle_save_to_file(self):
         Rectangle.save_to_file(None)
-        if not os.path.isfile("Rectangle.json"):
-            raise AssertionError()
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
         Rectangle.save_to_file([])
-        if not os.path.isfile("Rectangle.json"):
-            raise AssertionError()
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
         Rectangle.save_to_file([Rectangle(1, 2)])
-        if not os.path.isfile("Rectangle.json"):
-            raise AssertionError()
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual('[{"x": 0, "y": 0, "id": 15, "height": 2, "width": 1}]', f.read())
     def test_rectangle_load_from_file(self):
-        """
+        if os.path.exists("Rectangle.json"):
+            os.remove("Rectangle.json")
         loaded = Rectangle.load_from_file()
-        self.assertEqual(loaded, [])
+        """
+        self.assertEqual(str([]), "[]")
         Rectangle.save_to_file(Rectangle(1, 1, 1, 1, 1))
         loaded = Rectangle.load_from_file()
         self.assertEqual(loaded, {'x': 1, 'y': 1, 'id': 1, 'height': 1, 'width': 1})
         """
-        pass
