@@ -13,5 +13,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string(None), "null")
         self.assertEqual(Base.to_json_string([]), "[]")
         self.assertEqual(Base.to_json_string([ { 'id': 12 }]), '[{"id": 12}]')
-    def test_base_from_json_string(self):
-        pass
+    def test_base_from_json_string(self): 
+        self.assertEqual(Base.from_json_string(None), [])
+        with self.assertRaises(TypeError):
+            Base.from_json_string([])
+        self.assertEqual(Base.from_json_string('[{"id": 89 }]'), [ { 'id': 89 }])
