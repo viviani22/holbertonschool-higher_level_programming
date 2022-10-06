@@ -10,10 +10,13 @@ class TestBase(unittest.TestCase):
         r3 = Rectangle(1, 2, 3, 4)
         with self.assertRaises(TypeError):
             r4 = Rectangle("1", 2)
+        with self.assertRaises(TypeError):
             r4 = Rectangle(1, "2")
+        with self.assertRaises(TypeError):
             r2 = Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
             r3 = Rectangle(1, 2, 3, "4")
-        r3 = Rectangle(1, 2, 3, 4, 5)
+        r4 = Rectangle(1, 2, 3, 4, 5)
         with self.assertRaises(ValueError):
             r1 = Rectangle(-1, 2)
             r1 = Rectangle(1, -2)
