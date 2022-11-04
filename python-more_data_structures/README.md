@@ -13,4 +13,4 @@
 - [10-best_score.py](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/python-more_data_structures/10-best_score.py) Returns a key with the biggest integer value.
 - [11-multiply_list_map.py](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/python-more_data_structures/11-multiply_list_map.py) Returns a list with all values multiplied by a number without using any loops.
 - [12-roman_to_int.py](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/python-more_data_structures/12-roman_to_int.py) Converts a Roman numeral to an integer.
-- [100-weight_average.py](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/python-more_data_structures/100-weight_average.py) Rturns the weighted average of all integers tuple (<score>, <weight>).
+- [100-weight_average.py](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/python-more_data_structures/100-weight_average.py) Returns the weighted average of all integers tuple.
