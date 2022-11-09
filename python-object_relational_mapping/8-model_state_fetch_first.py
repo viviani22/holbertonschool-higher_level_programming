@@ -11,4 +11,7 @@ if __name__ == "__main__":
                            f"@localhost/{sys.argv[3]}")
     with Session(engine) as session:
         result = session.query(State).first()
-        print(f"{result.id}: {result.name}")
+        if result:
+            print(f"{result.id}: {result.name}")
+        else:
+            print("Nothing")
