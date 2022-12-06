@@ -1,5 +1,7 @@
 #!/usr/bin/node
 const lang = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-lang.forEach(elem => {
-  console.log(elem);
-});
+let i = 0;
+while (i < lang.length) {
+  console.log(lang[i]);
+  i = i + 1;
+}
