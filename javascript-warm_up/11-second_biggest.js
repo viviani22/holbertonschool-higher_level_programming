@@ -11,6 +11,9 @@ if (myArgs.length === 0) {
       secondLargest = largest;
       largest = parseInt(myArgs[i]);
     }
+    if (parseInt(myArgs[i]) > secondLargest && parseInt(myArgs[i]) < largest) {
+      secondLargest = parseInt(myArgs[i]);
+    }
   }
   console.log(secondLargest);
 }
