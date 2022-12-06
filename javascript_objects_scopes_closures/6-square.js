@@ -1,10 +1,6 @@
 #!/usr/bin/node
 const SquareEx = require('./5-square');
 class Square extends SquareEx {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
