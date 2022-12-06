@@ -1,0 +1,13 @@
+{
+  "name": "javascript-warm_up",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "0-javascript_is_amazing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
