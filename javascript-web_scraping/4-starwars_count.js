@@ -9,7 +9,6 @@ request('https://swapi-api.hbtn.io/api/films/', function (error, response, b
   for (const [key, value] of Object.entries(dict.results)) {
     for (let j = 0; j < (dict.results[i].characters).length; j++) {
       if (dict.results[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
-      console.log(dict.results[i].characters[j]);
 	      number += 1;
       }
     }
