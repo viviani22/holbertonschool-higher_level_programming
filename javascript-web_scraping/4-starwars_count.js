@@ -5,14 +5,14 @@ let i = 0;
 
 request('https://swapi-api.hbtn.io/api/films/', function (error, response, body) {
   let number = 0;
-  const dict = JSON.parse(body);
-  for (const [key, value] of Object.entries(dict.results)) {
-    for (let j = 0; j < (dict.results[i].characters).length; j++) {
-      if (dict.results[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
-	      number += 1;
+  const films = JSON.parse(body).results;
+  for (const film in films) {
+    const characters = films[film].characters;
+    for (const id in characters) {
+      if (characters[id].includes(18)) {
+        number++;
       }
     }
-    i += 1;
   }
-console.log(number);
+  console.log(number);
 });
