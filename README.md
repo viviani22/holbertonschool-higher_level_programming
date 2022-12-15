@@ -16,3 +16,7 @@
 - [SQL - Introduction](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/SQL_introduction) Intro to SQL, creating, altering and deleting Databases, tables and attributes.
 - [SQL - More queries](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/SQL_more_queries) Continuation of previous project.
 - [Python - Object-relational mapping](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/python-object_relational_mapping) Using Python to interact with the database instead of MySQL.
+- [JavaScript - Warm up](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/javascript-warm_up) Javascript syntax and node.js
+- [JavaScript - Objects, Scopes and Closures](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/javascript_objects_scopes_closures) JS simple data-types, complex data-types (objects) and functions.
+- [JavaScript - Web scraping](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/javascript-web_scraping) JS, retrieves information from APIs using 'require' module.
+- [JavaScript - Web jQuery](https://github.com/viviani22/holbertonschool-higher_level_programming/tree/main/javascript-web_jquery) Using JavaScript as a scripting language for web as originally intented.
